@@ -1,7 +1,7 @@
 package jp.ac.uryukyu.ie.e215711;
 import java.util.ArrayList;
 import java.util.List;
-
+//ーーー恐らく完成ーーー
 public class ShogiBoard{
     void AddPiece1(List<String> ShogiBoard){//同じ内容の繰り返しを避けるためにメソッド化
         ShogiBoard.add("香");

@@ -1,7 +1,7 @@
 package jp.ac.uryukyu.ie.e215711;
 import java.util.List;
 import java.util.LinkedHashMap;
-
+//ーーー恐らく完成ーーー
 public class PieceIdentify {
     //LinkedHashMap<String, String> BoardMap;
     //mapにより識別子を与える
@@ -16,15 +16,15 @@ public class PieceIdentify {
             //String Evolution;　追加する可能性あり
             String j = Board.get(i);
             if(!(j.equals(""))){//!(j.equals("")) || !(j.equals("__"))
-                if(i<27){
+                if(i<27){//27は上から三行の駒の密集地帯
                     Player = "X";
-                    BoardMap.put(j, Player + row + column);
-                }else if(54<=i){
+                    BoardMap.put(Player + row + column,j);//key"駒"とvalue"座標"が一番初めに行ったが、入れ替えた
+                }else if(54<=i){//54は下から三行の密集地帯
                     Player = "Y";
-                    BoardMap.put(j, Player + row + column);
+                    BoardMap.put(Player + row + column,j);//key"駒"とvalue"座標"が一番初めに行ったが、入れ替えた
                 }
             }else if(j.equals("")){//j.equals("") || j.equals("__")
-                BoardMap.put("", "N" + row + column);
+                BoardMap.put("N" + row + column,"");//key""とvalue"座標"が一番初めに行ったが、入れ替えた
             }
             row += 1;
             if(row > 9){
