@@ -1,56 +1,20 @@
 package jp.ac.uryukyu.ie.e215711;
+//import java.util.List;
+//import java.util.Arrays;
+import java.util.LinkedHashMap;
 
 public class PieceMove {
-    int PieceNum = 0;
-    void Move(String Piece){
-        switch(Piece){
-            case "歩":
-
-            //位置取得
-            //setメソッドより書き換え
-            break;
-            case "香":
-
-            //位置取得
-            //setメソッドより書き換え
-            break;
-            case "桂":
-
-            //位置取得
-            //setメソッドより書き換え
-            break;
-            case "銀":
-
-            //位置取得
-            //setメソッドより書き換え
-            break;
-            case "金":
-
-            //位置取得
-            //setメソッドより書き換え
-            break;
-            case "王":
-
-            //位置取得
-            //setメソッドより書き換え
-            break;
-            case "飛":
-
-            //位置取得
-            //setメソッドより書き換え
-            break;
-            case "角":
-
-            //位置取得
-            //setメソッドより書き換え
-            break;
-            case "成":
-
-            //位置取得
-            //setメソッドより書き換え
-            break;
-
-        }
-
+    String defaultPiece = "";
+    String destinationPiece = "";
+    LinkedHashMap<String, String> move(String coordinate, LinkedHashMap<String, String> Board){
+        //GetSomethingFromCoordinate get = new GetSomethingFromCoordinate();
+        PieceSelecter selecter = new PieceSelecter();
+        PieceEvolution evo = new PieceEvolution();
+        String defaultPiece = Board.get(coordinate);
+        String destination = selecter.pieceSelecter();
+        Board.put(defaultPiece,"");//もといた場所に空白を追加
+        destinationPiece = evo.Evolution(defaultPiece, coordinate, destination);
+        Board.put(destination,destinationPiece);//移動先に駒を移動
+        return Board;
     }
 }

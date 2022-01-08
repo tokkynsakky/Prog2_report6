@@ -1,6 +1,8 @@
 package jp.ac.uryukyu.ie.e215711;
 import java.util.Scanner;
 
+
+// catch文を後から追加する
 public class PieceSelecter {
     String coordinate = "";
     int sum = 0;

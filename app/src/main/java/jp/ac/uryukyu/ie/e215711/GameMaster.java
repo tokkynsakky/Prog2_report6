@@ -1,8 +1,8 @@
 package jp.ac.uryukyu.ie.e215711;
-import java.util.LinkedHashMap;
+//import java.util.LinkedHashMap;
 //import jp.ac.uryukyu.ie.e215711.*;
 //import java.util.ArrayList;
-import java.util.List;
+//import java.util.List;
 
 
 //!!!!keyとvalueが逆なのでは？!!!!
@@ -11,13 +11,17 @@ import java.util.List;
  * 通常の将棋とは将棋盤の読み方が異なり、左上から行を読み、さらに下の行に移るように座標を扱う。
  */
 public class GameMaster {
+    static boolean Game = true;
     //List<String> Board;//これは、ArrayList。　あくまで表示用。　実際の処理はBoardMapで行うとする。
 
     public static void main(String[] args){
         MakeShogiBoard shogiBoard = new MakeShogiBoard();
         var identifiedBoard = shogiBoard.makeShogiBoard();
         PieceSelecter selecter = new PieceSelecter();
-        selecter.pieceSelecter();
+        PieceMove pieceMove = new PieceMove();
+        while(Game == true){
+            pieceMove.move(selecter.pieceSelecter(), identifiedBoard);
+        }
 
         /*
         List<String> Board;
