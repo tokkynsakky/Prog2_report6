@@ -14,15 +14,29 @@ public class GameMaster {
     //List<String> Board;//これは、ArrayList。　あくまで表示用。　実際の処理はBoardMapで行うとする。
 
     public static void main(String[] args){
+        MakeShogiBoard shogiBoard = new MakeShogiBoard();
+        var identifiedBoard = shogiBoard.makeShogiBoard();
+        PieceSelecter selecter = new PieceSelecter();
+        selecter.pieceSelecter();
+
+        /*
         List<String> Board;
         ShogiBoard ShogiBoard = new ShogiBoard();//将棋盤の作成クラスをインスタンス化
-        PieceIdentify id = new PieceIdentify();//駒に座標と持ち主の情報を追加するクラスをインスタンス化
+        PieceIdentify identityBoard = new PieceIdentify();//駒に座標と持ち主の情報を追加するクラスをインスタンス化
         Board = ShogiBoard.MakeShogiBoard();//将棋盤作成　
         LinkedHashMap<String, String> identifiedBoard = new LinkedHashMap<>();
-        identifiedBoard = id.Identify(Board);//将棋盤の駒に座標を追加　根底はこれ
+        identifiedBoard = identityBoard.Identify(Board);//将棋盤の駒に座標を追加　根底はこれ identifiedBoardをいじっていく
+        */
 
+        /*
         ShowBoard ShowBoard = new ShowBoard();//将棋盤の表示のインスタンス化 
         ShowBoard.Show(identifiedBoard);//将棋盤の表示
+        */
+
+        //プレイヤーのターン これは後で考えるとする
+        //移動する駒を選択　ー＞　移動  --> 座標指定(key)  ==>  駒(value)  ==>  駒.java.move()  ==>  bttle()
+        //相手のターン
+        //移動する駒を選択　ー＞　移動
 
 
         //System.out.println(Board);
