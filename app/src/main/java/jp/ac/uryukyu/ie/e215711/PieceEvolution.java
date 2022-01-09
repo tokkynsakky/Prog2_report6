@@ -51,8 +51,17 @@ public class PieceEvolution {
                     evoPiece = "ケ";
                     case "银":
                     evoPiece = "ギ";
+                    case "飞":
+                    evoPiece = "龍";
+                    case "觕":
+                    evoPiece = "马";
+                    case "飛":
+                    evoPiece = "竜";
+                    case "角":
+                    evoPiece = "馬";
                 }
-        
+            }else{
+                evoPiece = piece;
             }
         }
     return evoPiece;    
