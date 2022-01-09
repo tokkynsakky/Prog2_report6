@@ -11,22 +11,22 @@ public class ShogiBoard{
     int Sum = 0;
     void AddPiece3(List<String> ShogiBoard){
         if(Sum == 0){
-            ShogiBoard.add("＿");
-            ShogiBoard.add("飞");
+            ShogiBoard.add("＿NNNN");
+            ShogiBoard.add("飞B可非臣");
             for(int i = 0;i<5;i++){
-                ShogiBoard.add("＿");
+                ShogiBoard.add("＿NNNN");
             }
-            ShogiBoard.add("觕");
-            ShogiBoard.add("＿");
+            ShogiBoard.add("觕B可非臣");
+            ShogiBoard.add("＿NNNN");
             Sum ++;
         }else if(Sum == 1){
-            ShogiBoard.add("＿");
-            ShogiBoard.add("角");
+            ShogiBoard.add("＿NNNN");
+            ShogiBoard.add("角A可非臣");
             for(int i = 0;i<5;i++){
-                ShogiBoard.add("＿");
+                ShogiBoard.add("＿NNNN");
             }
-            ShogiBoard.add("飛");
-            ShogiBoard.add("＿");
+            ShogiBoard.add("飛A可非臣");
+            ShogiBoard.add("＿NNNN");
         }
     }
     /*
@@ -36,29 +36,29 @@ public class ShogiBoard{
     List<String> ShogiBoard = new ArrayList<>();
     List<String> MakeShogiBoard(){
         
-        ShogiBoard.add("䅨");
-        ShogiBoard.add("圭");
-        ShogiBoard.add("银");
-        ShogiBoard.add("釒");
-        ShogiBoard.add("玉");
-        ShogiBoard.add("釒");
-        ShogiBoard.add("银");
-        ShogiBoard.add("圭");
-        ShogiBoard.add("䅨");    
+        ShogiBoard.add("䅨B可非臣");
+        ShogiBoard.add("圭B可非臣");
+        ShogiBoard.add("银B可非臣");
+        ShogiBoard.add("釒B不非臣");
+        ShogiBoard.add("玉B不非王");
+        ShogiBoard.add("釒B不非臣");
+        ShogiBoard.add("银B可非臣");
+        ShogiBoard.add("圭B可非臣");
+        ShogiBoard.add("䅨B可非臣");    
         AddPiece3(ShogiBoard);
-        AddPiece2(ShogiBoard, "步", 9);
-        AddPiece2(ShogiBoard, "＿", 27);
-        AddPiece2(ShogiBoard, "歩", 9);
+        AddPiece2(ShogiBoard, "步B可非臣", 9);
+        AddPiece2(ShogiBoard, "＿NNNN", 27);
+        AddPiece2(ShogiBoard, "歩A可非臣", 9);
         AddPiece3(ShogiBoard);
-        ShogiBoard.add("香");
-        ShogiBoard.add("桂");
-        ShogiBoard.add("銀");
-        ShogiBoard.add("金");
-        ShogiBoard.add("王");
-        ShogiBoard.add("金");
-        ShogiBoard.add("銀");
-        ShogiBoard.add("桂");
-        ShogiBoard.add("香");    
+        ShogiBoard.add("香A可非臣");
+        ShogiBoard.add("桂A可非臣");
+        ShogiBoard.add("銀A可非臣");
+        ShogiBoard.add("金A不非臣");
+        ShogiBoard.add("王A不非王");
+        ShogiBoard.add("金A不非臣");
+        ShogiBoard.add("銀A可非臣");
+        ShogiBoard.add("桂A可非臣");
+        ShogiBoard.add("香A可非臣");    
         //System.out.println(ShogiBoard);
         return ShogiBoard;
     }

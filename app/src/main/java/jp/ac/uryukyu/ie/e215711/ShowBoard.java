@@ -11,7 +11,8 @@ public class ShowBoard {
         System.out.printf("\n");
         int sum = 0;
         for (String x: Board.values()) {
-            System.out.printf(x);
+            GetSomethingFromIdentifier get = new GetSomethingFromIdentifier();
+            System.out.printf(get.getPiece(x));
             sum ++;
             if(sum%9==0){
                 System.out.printf("\n");

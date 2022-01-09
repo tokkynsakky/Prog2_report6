@@ -6,7 +6,7 @@ public class MovePiece {
         var Board = shogiBoard;
         String currentPlacePiece = shogiBoard.get(currentPlace);
         //String destinationPiece = shogiBoard.get(destination);
-        Board.put(currentPlace, "＿");
+        Board.put(currentPlace, "＿NNNN");
         Board.put(destination, currentPlacePiece);
         return Board;
     }

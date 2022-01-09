@@ -1,9 +1,14 @@
 package jp.ac.uryukyu.ie.e215711;
 public class PieceEvolution {
+    // ^^^^^^^^^^色々と修正の余地あり＾＾＾＾＾＾＾＾＾＾
+    
+
+
+    /*
     String evoPiece;
     String Evolution(String piece, String coordinate, String destination){
-        GetSomethingFromCoordinate get = new GetSomethingFromCoordinate();
-        if(get.getOwner(coordinate).equals("X")){
+        GetSomethingFromIdentifier get = new GetSomethingFromIdentifier();
+        if(get.getOwner(coordinate).equals("B")){
             if(get.getColumn(destination)>6){
                 switch(piece){
                     case "歩":
@@ -66,4 +71,8 @@ public class PieceEvolution {
         }
     return evoPiece;    
     }
+
+    */
+
+
 }
