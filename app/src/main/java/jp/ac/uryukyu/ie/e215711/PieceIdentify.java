@@ -27,14 +27,6 @@ public class PieceIdentify {
             Column++;
             column = String.valueOf(Column);
         }
-        for (String c1 : BoardMap.keySet()) {
-            System.out.println(c1);// a b c
-          }
-      
-          // for文とvalues (値を取得)
-          for (String c1 : BoardMap.values()) {
-            System.out.println(c1);// 赤 黄 青
-          }
         return BoardMap;
     }
 }

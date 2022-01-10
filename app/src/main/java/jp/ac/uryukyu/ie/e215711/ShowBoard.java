@@ -10,8 +10,9 @@ public class ShowBoard {
     void Show(LinkedHashMap<String, String> Board){
         System.out.printf("\n");
         int sum = 0;
-        for (String x: Board.values()) {
-            GetSomethingFromIdentifier get = new GetSomethingFromIdentifier();
+        for(String x: Board.values()) {
+            GetSomethingFromIdentifier get = new GetSomethingFromIdentifier();//移動後
+            //System.out.println(x);
             System.out.printf(get.getPiece(x));
             sum ++;
             if(sum%9==0){
