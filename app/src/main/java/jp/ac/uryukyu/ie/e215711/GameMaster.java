@@ -1,8 +1,5 @@
 package jp.ac.uryukyu.ie.e215711;
 import java.util.LinkedHashMap;
-//import jp.ac.uryukyu.ie.e215711.*;
-//import java.util.ArrayList;
-//import java.util.List;
 import java.util.Scanner;
 
 public class GameMaster {
@@ -27,7 +24,7 @@ public class GameMaster {
                 if("end".equals(str)){scan.close();break;}
                 String currentPlace = str;//入力された移動させる駒の座標
                 
-                System.out.println("移動先の座標を入力してください(行＋列)(endでゲームを終了)");
+                System.out.println("移動先の座標を入力してください(行＋列)");
                 String string =scan.next();
                 if("end".equals(str)){scan.close();break;}
                 String destination = string;//入力された駒の移動先の座標
@@ -41,8 +38,12 @@ public class GameMaster {
                     piecestandB = pieceStand.obtainedPiece(destinationPlacePiece, piecestandB, getOrderB);
                     if(!(get.getPiece(destination).equals("＿"))){getOrderB++;}
                 }
+
+                //ここでevo(destination)? evoに位置判定もつけてしまおうと思う
+                
                 shogiBoard = Move.movePiece(currentPlace, destination, shogiBoard);
                 show.Show(shogiBoard);showpiece.Show(piecestandA,piecestandB);
+                
             }
         }
     }
