@@ -1,7 +1,7 @@
 package jp.ac.uryukyu.ie.e215711;
 
 public class PieceTranslate {
-    String pieceTranslate(String Piece){
+    String Translate(String Piece){
         if(Piece.equals("歩")){
             Piece = "步";
         }else if(Piece.equals("步")){  
