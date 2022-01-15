@@ -6,6 +6,7 @@ public class GameMaster {
     public static void main(String[] args){
         LinkedHashMap<String, String> piecestandA = new LinkedHashMap<>();
         LinkedHashMap<String, String> piecestandB = new LinkedHashMap<>();
+        GameJudge judge = new GameJudge();
         PieceIdentify identify = new PieceIdentify();
         var shogiBoard = identify.Identify();
         PieceStand pieceStand = new PieceStand();
@@ -17,8 +18,7 @@ public class GameMaster {
         int getOrderB = 1;//追加
         GetSomethingFromIdentifier get = new GetSomethingFromIdentifier();
         try(Scanner scan=new Scanner(System.in)){
-            //System.out.println("終了は「end」を入力");
-            while(true){
+            while(judge.gottenPieceJudge(piecestandA, piecestandB) == true){
                 System.out.println("移動させる駒の座標を入力してください(行＋列)(endでゲームを終了)");
                 String str=scan.next();
                 if("end".equals(str)){scan.close();break;}
@@ -43,9 +43,7 @@ public class GameMaster {
                 
                 shogiBoard = Move.movePiece(currentPlace, destination, shogiBoard, piecestandA, piecestandB);
                 show.Show(shogiBoard);showpiece.Show(piecestandA,piecestandB);
-                System.out.println("手持ちの駒の識別子一覧");
-                System.out.println(piecestandB);
-                System.out.println(piecestandA);
+                System.out.println(piecestandB);System.out.println(piecestandA);
             }
         }
     }
