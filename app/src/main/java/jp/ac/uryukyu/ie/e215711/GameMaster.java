@@ -41,9 +41,11 @@ public class GameMaster {
 
                 //ここでevo(destination)? evoに位置判定もつけてしまおうと思う
                 
-                shogiBoard = Move.movePiece(currentPlace, destination, shogiBoard);
+                shogiBoard = Move.movePiece(currentPlace, destination, shogiBoard, piecestandA, piecestandB);
                 show.Show(shogiBoard);showpiece.Show(piecestandA,piecestandB);
-                
+                System.out.println("手持ちの駒の識別子一覧");
+                System.out.println(piecestandB);
+                System.out.println(piecestandA);
             }
         }
     }

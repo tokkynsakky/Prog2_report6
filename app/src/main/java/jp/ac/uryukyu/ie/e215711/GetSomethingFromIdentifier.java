@@ -3,6 +3,18 @@ import java.util.List;
 import java.util.Arrays;
 
 public class GetSomethingFromIdentifier {
+    String getRow(String destination){
+        int sum = 0;
+        String num = "";
+        List<String> rowNColumn = Arrays.asList(destination.split(""));
+        for(String str: rowNColumn){
+            if(sum == 0){
+                num = str;
+            }
+            sum++;
+        }
+        return num;
+    }
     String getPiece(String Piece){
         int sum = 0;
         String piece = "";
