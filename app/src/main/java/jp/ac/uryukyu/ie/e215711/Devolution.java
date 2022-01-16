@@ -1,7 +1,15 @@
 package jp.ac.uryukyu.ie.e215711;
-
+/**
+ * 成り(Evolution)をした後に、元に戻すことを目的としたメソッドを内包するクラス
+ * @param piece メソッドにより変化された駒を保存する変数。大文字から始まるPieceとは異なる
+ */
 public class Devolution {
     String piece = "";
+    /**
+     * 成り状態を戻し、通常の駒に変化させるメソッド
+     * @param Piece メソッドに渡された駒を保存する変数
+     * @return 変化した駒を返す
+     */
     String devolution(String Piece){
         GetSomethingFromIdentifier get = new GetSomethingFromIdentifier();
         Piece = get.getPiece(Piece);

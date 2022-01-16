@@ -1,6 +1,13 @@
 package jp.ac.uryukyu.ie.e215711;
-
+/**
+ * プレーヤーによって異なる漢字の種類を読み替えるためのクラス
+ */
 public class PieceTranslate {
+    /**
+     * 漢字の種類を変更するメソッド
+     * @param Piece　駒の文字種
+     * @return　変更された駒を返す
+     */
     String Translate(String Piece){
         if(Piece.equals("歩")){
             Piece = "步";
