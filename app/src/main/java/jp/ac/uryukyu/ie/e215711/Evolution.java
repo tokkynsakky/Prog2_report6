@@ -1,7 +1,6 @@
 package jp.ac.uryukyu.ie.e215711;
 /**
  * 駒を成り状態にするメソッドを含むクラス
- * @param piece 成り状態になった駒を受け取り保存する変数
  */
 public class Evolution {
     String piece = "";

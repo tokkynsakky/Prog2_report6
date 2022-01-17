@@ -7,16 +7,7 @@ import java.util.Scanner;
 public class GameMaster {
     /**
      * 将棋ゲームを実際操作するメソッド。while文でscannerの入力を条件が達成されるまで繰り返し受け付ける。王、玉を取ることで勝敗が決する（二歩の判定は不可）
-     * @param str 移動させる駒の座標
-     * @param cuttentPlace 現在地の座標
-     * @param string 駒の移動先の座標
-     * @param destination 目的地の座標
-     * @param destinationPlacePiece 目的地の座標の駒
-     * @param piecestandA プレーヤーAの持ち駒リスト
-     * @param getOrderA プレーヤーAが取得した駒の取得された順番（識別子として用いる）(１番目からのスタートとする)
-     * @param piecestandB プレーヤーBの持ち駒リスト
-     * @param getOrderB プレーヤーBが取得した駒の取得された順番
-     * @return void なし
+     * @param args 形式的に書いたもの。特に何も入っていない
      */
     public static void main(String[] args){
         LinkedHashMap<String, String> piecestandA = new LinkedHashMap<>();
